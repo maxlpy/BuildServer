@@ -6,19 +6,18 @@ Create a VM to host your build server.  Note, it must be a 64 bit image, otherwi
     vagrant init hashicorp/precise64
 ##Configure VagrantFile to enable public network and forwarded port
 	vim Vagrantfile
-	config.vm.network "forwarded_port", guest: 6060, host: 6767
-	config.vm.network "forwarded_port", guest: 8080, host: 8181
+	config.vm.network "forwarded_port", guest: 8080, host:9090
 
 	# Create a private network, which allows host-only access to the machine
 	# using a specific IP.
-	config.vm.network "private_network", ip: "192.168.33.11"
+	# config.vm.network "private_network", ip: "192.168.33.11"
 
 	# Create a public network, which generally matched to bridged network.
 	# Bridged networks make the machine appear as another physical device on
 	# your network.
 	config.vm.network "public_network"
 
-## Preparing machine for docker
+## Build up Docker
 
 install the backported kernel
 
