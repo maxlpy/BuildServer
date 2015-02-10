@@ -19,12 +19,12 @@ Create a VM to host your build server.  Note, it must be a 64 bit image, otherwi
 
 ## Build up Docker
 
-install the backported kernel
+Install the backported kernel
 
     sudo apt-get update
     sudo apt-get -y install linux-image-generic-lts-raring linux-headers-generic-lts-raring
 
-reboot
+Reboot
 
     sudo reboot
 
